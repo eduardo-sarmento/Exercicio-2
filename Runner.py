@@ -5,8 +5,8 @@ import Exercicio2_client
 
 # 
 def main():
-    process_number = int(sys.argv[1])
-    size = int(sys.argv[2])
+    process_number = int(sys.argv[1]) # Número de processos a ser criado
+    size = int(sys.argv[2]) # quantidade de números a serem criados
 
     start_time = time.time()
 
