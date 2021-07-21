@@ -10,7 +10,7 @@ def client(n):
 
     # Gera números e chama post e get do servidor
     for i in range(numeros):
-        r = random.random()
+        r = random.randint(-1000000,1000000)
         multicall.post(r)
         multicall.get(r)
         result = multicall()
