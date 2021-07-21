@@ -3,20 +3,30 @@ import multiprocessing
 import time
 import Exercicio2_client
 
+# 
 def main():
     process_number = int(sys.argv[1])
     size = int(sys.argv[2])
+
+    start_time = time.time()
+
     jobs = []
-    #process_server = multiprocessing.Process(target=Exercicio2_server.server())
-    #jobs.append(process_server)
+
+    # Cria processos e divide a quantidade m de requisicoes entre eles 
     for i in range(0, process_number):
         process_client = multiprocessing.Process(target=Exercicio2_client.client(size//process_number))
         jobs.append(process_client)
+
+    # Inicia todos os jobs
     for j in jobs:
         j.start()
 
-    # Ensure all of the threads have finished
+    # Assegura que todas os jobs terminaram
     for j in jobs:
         j.join()
+
+    elapsed = time.time()-start_time
+
+    print("All clients served. Elapsed: {}".format(elapsed))
 if __name__ == "__main__":
     main()
