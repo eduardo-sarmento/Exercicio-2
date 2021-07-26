@@ -26,6 +26,7 @@ def main():
         j.join()
 
     elapsed = time.time()-start_time
+    print(elapsed)
 
     print("All clients served. Elapsed: {}".format(elapsed))
 if __name__ == "__main__":
