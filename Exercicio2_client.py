@@ -14,4 +14,4 @@ def client(n):
         multicall.post(r)
         multicall.get(r)
         result = multicall()
-        #print(tuple(result))
+        print(tuple(result))

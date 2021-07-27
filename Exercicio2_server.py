@@ -4,10 +4,7 @@ hashtable = {}
 
 def get(x):
     print(hashtable[x])
-    if x in hashtable.values():
-        return hashtable[x]
-    else:
-        return None;
+    return hashtable.get(x)
 
     
 
@@ -28,4 +25,4 @@ server.register_function(post, 'post')
 
 # Serve requisicoes indefinidamente
 server.serve_forever()
-print(hashtable.values())
+#print(hashtable.values())

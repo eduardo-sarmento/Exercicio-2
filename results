@@ -1,4 +1,3 @@
-[2, 800] = All clients served. Elapsed: 46.58139944076538
-[4, 800] = All clients served. Elapsed: 26.027769327163696
-[8, 800] = All clients served. Elapsed: 14.748302221298218
-
+[2, 30000] = All clients served. Elapsed: 22538.261616706848
+[4, 30000] = All clients served. Elapsed: 11414.095788002014
+[8, 30000] = All clients served. Elapsed: 5877.850399971008
